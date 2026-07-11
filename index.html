@@ -156,6 +156,20 @@
     display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:600;
     background:#fff6e6; color:#8a5a12; padding:7px 12px; border-radius:4px; margin-bottom:18px;
   }
+  .shot-gallery{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:22px;
+  }
+  .shot-gallery figure{margin:0;}
+  .shot-gallery img{
+    width:100%; border-radius:8px; border:1px solid var(--line-light);
+    display:block; box-shadow:0 4px 14px rgba(16,27,48,0.08);
+  }
+  .shot-gallery figcaption{
+    font-family:var(--mono); font-size:10.5px; color:var(--muted); text-align:center; margin-top:8px;
+  }
+  @media (max-width:640px){
+    .shot-gallery{grid-template-columns:repeat(2,1fr);}
+  }
 
   /* ===== SKILLS ===== */
   .skills-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:24px;}
@@ -242,10 +256,24 @@
         <div class="project-body">
           <div class="achievement">★ A+ Grade — noted on official transcript</div>
           <p class="project-desc">A household management app that brings finance tracking and meal planning together in one place for families. Presented to and evaluated by the department's head committee.</p>
+          <div class="shot-gallery">
+            <figure><img src="screenshots/login.jpeg" alt="Family eBoard login screen"><figcaption>LOGIN</figcaption></figure>
+            <figure><img src="screenshots/home.jpeg" alt="Family eBoard home dashboard"><figcaption>DASHBOARD</figcaption></figure>
+            <figure><img src="screenshots/expense.jpeg" alt="Family eBoard expense tracking"><figcaption>EXPENSE TRACKING</figcaption></figure>
+            <figure><img src="screenshots/meal.jpeg" alt="Family eBoard meal planning"><figcaption>MEAL PLANNING</figcaption></figure>
+          </div>
+          <div class="badge-row">
+            <span class="badge">User authentication</span>
+            <span class="badge">Financial dashboard</span>
+            <span class="badge">Expense tracking</span>
+            <span class="badge">Meal planning</span>
+            <span class="badge">Grocery list generation</span>
+            <span class="badge">Notifications</span>
+          </div>
           <div class="stack-viz">
             <div class="stack-layer layer-role"><span>Role</span><span>Lead Developer (2-member team)</span></div>
-            <div class="stack-layer layer-frontend"><span>Frontend</span><span>Flutter</span></div>
-            <div class="stack-layer layer-backend"><span>Backend</span><span>Firebase</span></div>
+            <div class="stack-layer layer-frontend"><span>Frontend</span><span>Flutter (Dart)</span></div>
+            <div class="stack-layer layer-backend"><span>Backend</span><span>Firebase · Firestore · Firebase Auth</span></div>
           </div>
           <div class="project-links">
             <a href="https://github.com/Huma-ashfaq/family_e_boardd" target="_blank">View on GitHub →</a>
